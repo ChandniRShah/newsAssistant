@@ -21,17 +21,16 @@
                 {{--{{ $user->name }}--}}
                 {{--  what should be displayed if user is logged in --}}
             @else
-                <li><a href="login.html" >Log in</a></li>
-                <li><a href="#">Sign up</a></li>
+                <li><a href="{{ route('login') }}" >Log in</a></li>
+                <li><a href="{{ route('register') }}">Sign up</a></li>
             @endif
         </ul>
     </nav>
 </header>
-<div id="adbanner">
 
+<div class="contentWrapper">
+    @yield('content')
 </div>
-
-@yield('content')
 
 <footer>
     <p>Copyright &copy 2018 NewsAssist. All Rights Reserved.</p>

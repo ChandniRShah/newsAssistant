@@ -8,6 +8,7 @@
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'SourceSansProLight';
     src: url('fonts/SourceSansPro-Light-webfont.eot');
@@ -23,19 +24,22 @@
     margin: 0;
     padding: 0;
 }
-img{
+
+img {
     width: 270px;
     border: none;
 }
 
-body{
+body {
     font-family: SourceSansProLight, Verdana, Arial, sans-serif;
     font-size: 14px;
 }
-header h1, nav, nav li{
+
+header h1, nav, nav li {
     display: inline-block;
 }
-header{
+
+header {
     background-color: #5786cc;
     height: 50px;
     width: 100%;
@@ -43,34 +47,38 @@ header{
     top: 0;
     right: 0;
     left: 0;
-    box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .8);
     z-index: 100;
     border-bottom: 0px solid #C10021;
 }
-header h1 a{
+
+header h1 a {
     font-family: LeagueGothic, Verdana, Arial, sans-serif;
     color: white;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: normal;
     font-size: 28px;
-    position:absolute;
-    top:8px;
+    position: absolute;
+    top: 8px;
     left: 35px;
 }
-#version{
+
+#version {
     color: white;
     font-size: 10px;
     position: relative;
     top: 12px;
     left: 122px;
 }
-nav{
+
+nav {
     position: absolute;
     top: 32.8%;
     left: 12.5%;
 }
-nav li a{
+
+nav li a {
     color: white;
     text-decoration: none;
     font-family: Verdana, Arial, sans-serif;
@@ -78,25 +86,30 @@ nav li a{
     margin-right: 12px;
     padding: 5px;
 }
-nav li a:hover{
+
+nav li a:hover {
     background-color: #1c4371;
     border-radius: 3px;
 }
-.current{
+
+.current {
     background-color: #1c4371;
     border-radius: 3px;
 }
-#adbanner{
+
+#adbanner {
     margin-top: 50px;
     height: 7px;
     background-color: #8bb5ff;
     border-bottom: 1px solid #c3c3c3;
 }
-#ad{
+
+#ad {
     width: 728px;
     margin: auto;
 }
-#adbanner a{
+
+#adbanner a {
     display: inline-block;
     border: 1px solid #c3c3c3;
     height: 90px;
@@ -108,26 +121,33 @@ nav li a:hover{
     font-size: 14px;
     background-color: #d1d1d1;
 }
-#adbanner a:hover{
+
+#adbanner a:hover {
     border: 1px solid #a7a7a7;
     /*text-decoration: underline;*/
     color: #3f3f3f;
     background-color: #cacaca;
 }
-#adbanner a p{
+
+#adbanner a p {
     text-align: center;
     margin-top: 35px;
 }
-section{
+
+section {
     width: 1000px;
     margin: auto;
 }
-#secwrapper{
+
+#secwrapper {
     /*background: url('images/bg.gif') fixed;
     background-color: #f47771;*/
     padding-top: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
-article{
+
+article {
     width: 270px;
     margin-right: 40px;
     display: inline-block;
@@ -138,13 +158,15 @@ article{
     border-radius: 3px;
     box-shadow: 0 2px 3px #ccc;
     background-color: white;
-    *display:inline;
-    zoom:1;
+    *display: inline;
+    zoom: 1;
 }
-#sponsors, .rightcl{
+
+#sponsors, .rightcl {
     margin-right: 0px;
 }
-.readmore{
+
+.readmore {
     background-color: #5786cc;
     padding: 5px 10px;
     color: black;
@@ -153,17 +175,21 @@ article{
     display: inline-block;
     font-weight: bold;
 }
-.readmore:hover{
+
+.readmore:hover {
     background-color: #bfe7ff;
 }
-article p{
+
+article p {
     margin-bottom: 7px;
 }
-#photobox img{
+
+#photobox img {
     margin: 5px 4px 6px 6.5px;
     border: 1px solid black;
 }
-#sponsors a{
+
+#sponsors a {
     color: #6b6b6b;
     text-decoration: none;
     font-family: Verdana, Arial, sans-serif;
@@ -175,27 +201,31 @@ article p{
     margin: 5px 4px 6px 7px;
     border: 1px solid #c3c3c3;
 }
-#sponsors a p{
+
+#sponsors a p {
     margin: 50px auto;
     width: 125px;
     text-align: center;
 }
-#sponsors a:hover{
+
+#sponsors a:hover {
     border: 1px solid #a7a7a7;
     /*text-decoration: underline;*/
     color: #3f3f3f;
     background-color: #cacaca;
 }
-#featured{
+
+#featured {
     position: relative;
 }
-#featuredico{
+
+#featuredico {
     position: absolute;
     top: 0;
     left: 0;
 }
 
-footer{
+footer {
     background-color: #5786cc;
     height: 28px;
     color: white;
@@ -204,7 +234,8 @@ footer{
     bottom: 0;
     width: 100%;
 }
-footer p{
+
+footer p {
     margin: 5px 0 0 12%;
 }
 
@@ -215,6 +246,7 @@ footer p{
     padding: 8% 0 0;
     margin: auto;
 }
+
 .form {
     position: relative;
     z-index: 1;
@@ -225,6 +257,7 @@ footer p{
     text-align: center;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
+
 .form input {
     font-family: "Roboto", sans-serif;
     outline: 0;
@@ -236,6 +269,7 @@ footer p{
     box-sizing: border-box;
     font-size: 14px;
 }
+
 .form button {
     font-family: "Roboto", sans-serif;
     text-transform: uppercase;
@@ -250,37 +284,45 @@ footer p{
     transition: all 0.3 ease;
     cursor: pointer;
 }
-.form button:hover,.form button:active,.form button:focus {
+
+.form button:hover, .form button:active, .form button:focus {
     background: #5786cc;
 }
+
 .form .message {
     margin: 15px 0 0;
     color: #b3b3b3;
     font-size: 12px;
 }
+
 .form .message a {
     color: #1c4371;
     text-decoration: none;
     font-weight: bold;
 }
+
 .form .register-form {
     display: none;
 }
+
 .container {
     position: relative;
     z-index: 1;
     max-width: 300px;
     margin: 0 auto;
 }
+
 .container:before, .container:after {
     content: "";
     display: block;
     clear: both;
 }
+
 .container .info {
     margin: 50px auto;
     text-align: center;
 }
+
 .container .info h1 {
     margin: 0 0 15px;
     padding: 0;
@@ -288,14 +330,17 @@ footer p{
     font-weight: 300;
     color: #1a1a1a;
 }
+
 .container .info span {
     color: #4d4d4d;
     font-size: 12px;
 }
+
 .container .info span a {
     color: #000000;
     text-decoration: none;
 }
+
 .container .info span .fa {
     color: #EF3B3A;
 }
