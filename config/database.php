@@ -1,5 +1,16 @@
 <?php
 
+
+//added for heroku configuration
+$url = parse_url(getenv("mysql://ba6053acd6b35c:83d6bb89@us-cdbr-iron-east-01.cleardb.net/heroku_37de6b872413845?reconnect=true"));
+
+$host = $url["us-cdbr-iron-east-01.cleardb.net"];
+$username = $url["ba6053acd6b35c"];
+$password = $url["83d6bb89"];
+$database = $url["heroku_37de6b872413845"];
+//heroku configuration block end
+
+
 return [
 
     /*
@@ -40,21 +51,38 @@ return [
             'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
         ],
 
+//        'mysql' => [
+//            'driver' => 'mysql',
+//            'host' => env('DB_HOST', '127.0.0.1'),
+//            'port' => env('DB_PORT', '3306'),
+//            'database' => env('DB_DATABASE', 'forge'),
+//            'username' => env('DB_USERNAME', 'forge'),
+//            'password' => env('DB_PASSWORD', ''),
+//            'unix_socket' => env('DB_SOCKET', ''),
+//            'charset' => 'utf8mb4',
+//            'collation' => 'utf8mb4_unicode_ci',
+//            'prefix' => '',
+//            'prefix_indexes' => true,
+//            'strict' => true,
+//            'engine' => null,
+//        ],
+
+        //added for heroku configuration
         'mysql' => [
             'driver' => 'mysql',
-            'host' => env('DB_HOST', '127.0.0.1'),
+            'host' => env('DB_HOST', $host),
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'forge'),
-            'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', ''),
+            'database' => env('DB_DATABASE', $database),
+            'username' => env('DB_USERNAME', $username),
+            'password' => env('DB_PASSWORD', $password),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
             'prefix' => '',
-            'prefix_indexes' => true,
             'strict' => true,
             'engine' => null,
         ],
+        //heroku configuration block end
 
         'pgsql' => [
             'driver' => 'pgsql',
