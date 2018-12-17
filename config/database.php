@@ -4,10 +4,10 @@
 //added for heroku configuration
 //$url = parse_url(getenv("mysql://ba6053acd6b35c:83d6bb89@us-cdbr-iron-east-01.cleardb.net/heroku_37de6b872413845?reconnect=true"));
 
-//$host = $url["us-cdbr-iron-east-01.cleardb.net"];
-//$username = $url["ba6053acd6b35c"];
-//$password = $url["83d6bb89"];
-//$database = $url["heroku_37de6b872413845"];
+$host = "us-cdbr-iron-east-01.cleardb.net";
+$username = "ba6053acd6b35c";
+$password = "83d6bb89";
+$database = "heroku_37de6b872413845";
 //heroku configuration block end
 
 
@@ -68,34 +68,21 @@ return [
 //        ],
 
         //added for heroku configuration
-//        'mysql' => [
-//            'driver' => 'mysql',
-//            'host' => env('DB_HOST', $host),
-//            'port' => env('DB_PORT', '3306'),
-//            'database' => env('DB_DATABASE', $database),
-//            'username' => env('DB_USERNAME', $username),
-//            'password' => env('DB_PASSWORD', $password),
-//            'unix_socket' => env('DB_SOCKET', ''),
-//            'charset' => 'utf8mb4',
-//            'collation' => 'utf8mb4_unicode_ci',
-//            'prefix' => '',
-//            'strict' => true,
-//            'engine' => null,
-//        ],
-        //heroku configuration block end
-
         'mysql' => [
             'driver' => 'mysql',
-            'host'     => parse_url(getenv("mysql://ba6053acd6b35c:83d6bb89@us-cdbr-iron-east-01.cleardb.net/heroku_37de6b872413845?reconnect=true"))["host"],
-            'database' => substr(parse_url(getenv("mysql://ba6053acd6b35c:83d6bb89@us-cdbr-iron-east-01.cleardb.net/heroku_37de6b872413845?reconnect=true"))["path"], 1),
-            'username' => parse_url(getenv("mysql://ba6053acd6b35c:83d6bb89@us-cdbr-iron-east-01.cleardb.net/heroku_37de6b872413845?reconnect=true"))["user"],
-            'password' => parse_url(getenv("mysql://ba6053acd6b35c:83d6bb89@us-cdbr-iron-east-01.cleardb.net/heroku_37de6b872413845?reconnect=true"))["pass"],
-            'charset' => 'utf8',
-            'collation' => 'utf8_unicode_ci',
+            'host' => env('DB_HOST', $host),
+            'port' => env('DB_PORT', '3306'),
+            'database' => env('DB_DATABASE', $database),
+            'username' => env('DB_USERNAME', $username),
+            'password' => env('DB_PASSWORD', $password),
+            'unix_socket' => env('DB_SOCKET', ''),
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
             'prefix' => '',
-            'strict' => false,
+            'strict' => true,
             'engine' => null,
         ],
+        //heroku configuration block end
 
         'pgsql' => [
             'driver' => 'pgsql',
