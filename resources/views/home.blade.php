@@ -1,23 +1,30 @@
 @extends('layouts.app')
 
+@section('title')
+    NewsAssist
+@endsection
+
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    You are logged in!
-                </div>
-            </div>
-        </div>
+    <div id="secwrapper">
+        <section>
+            <div class="news"></div>
+        </section>
     </div>
-</div>
+
+    <div id="webchat">
+        <script src="https://storage.googleapis.com/mrbot-cdn/webchat-0.4.2.js"></script>
+        <script>
+            WebChat.default.init({
+                selector: "#webchat",
+                initPayload: "/greet",
+                interval: 500,
+                socketUrl: "http://localhost:5002/",
+                title: "NewsChatbot",
+                subtitle: "",
+                profileAvatar: "https://rasa.com/assets/img/demo/sara_avatar.png",
+                showCloseButton: true,
+                fullScreenMode: false,
+            })
+        </script>
+    </div>
 @endsection

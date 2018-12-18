@@ -12,14 +12,14 @@
     <h1><a href="{{ url('/') }}">News Assist</a></h1>
     <nav>
         <ul>
-            <li><a href="{{ url('/') }}" class="current">Home</a></li>
-            <li><a href="{{ route('newsCategory') }}">News Source</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
             @if(auth()->user())
                 <?php $user = auth()->user() ?>
                 {{--{{ $user->name }}--}}
                 {{--  what should be displayed if user is logged in --}}
+                    <li><a href="{{ url('/') }}" >Home</a></li>
+                    <li><a href="{{ route('newsCategory') }}">Categories</a></li>
+                    <li><a href="{{ route('logout') }}">Sign out</a></li>
+                    {{--<li><a href="{{ route('newsCategory') }}">Sign out</a></li>--}}
             @else
                 <li><a href="{{ route('login') }}" >Log in</a></li>
                 <li><a href="{{ route('register') }}">Sign up</a></li>
